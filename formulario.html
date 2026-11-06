@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Registro</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+      form {
+        background: white;
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Formulario de Registro</h2>
+
+      <!-- 1. Nombre -->
+      <label for="nombre">Nombre completo:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ej: Erlin Martinez"
+        required
+      />
+
+      <!-- 2. Correo -->
+      <label for="correo">Correo electrónico:</label>
+      <input
+        type="email"
+        id="correo"
+        name="correo"
+        placeholder="ejemplo@gmail.com"
+        required
+      />
+
+      <!-- 3. Teléfono -->
+      <label for="telefono">Teléfono:</label>
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Ej: 3101234567"
+        required
+      />
+
+      <!-- 4. Fecha de nacimiento -->
+      <label for="fecha">Fecha de nacimiento:</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <!-- 5. Ciudad -->
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad" name="ciudad" required>
+        <option value="">Selecciona tu ciudad</option>
+        <option value="mocoa">Mocoa</option>
+        <option value="pasto">Pasto</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+      </select>
+
+      <!-- 6. Comentario -->
+      <label for="mensaje">Mensaje o comentario:</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="3"
+        placeholder="Escribe tu mensaje aquí..."
+      ></textarea>
+
+      <button type="submit">Enviar formulario</button>
+    </form>
+  </body>
+</html>
